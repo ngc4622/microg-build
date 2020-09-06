@@ -19,18 +19,30 @@ else
     mkdir -p $BUILD_DIR
     cd $BUILD_DIR
     # clone microg
-    git clone https://github.com/ngc4622/android_frameworks_mapsv1.git -b androidX
+    git clone https://github.com/microg/android_frameworks_mapsv1.git
     git clone https://github.com/microg/android_packages_apps_GmsCore.git
     git clone https://github.com/microg/android_packages_apps_GsfProxy.git
     git clone https://github.com/microg/FakeStore.git
     git clone https://github.com/microg/IchnaeaNlpBackend.git
     git clone https://github.com/ngc4622/NominatimGeocoderBackend.git -b androidX
-    git clone https://github.com/ngc4622/radiocells-nlp-android.git -b androidX
+    git clone https://github.com/openbmap/radiocells-nlp-android.git
     git clone https://github.com/microg/RemoteDroidGuard.git
     # clone F-Droid
     git clone https://gitlab.com/fdroid/fdroidclient.git -b 1.9
     git clone https://gitlab.com/fdroid/privileged-extension.git -b 0.2.11
 fi
+
+cd $TOP_DIR
+
+if [ -f "$TOP_DIR/fixup.done" ]; then
+    echo "Already done fixups"
+else
+    echo "Doing some fixups to solve build errors"
+    source $TOP_DIR/scripts/parts/migrate-to-X.sh
+    touch $TOP_DIR/fixup.done
+fi
+
+cd $TOP_DIR
 
 echo "Cleaning output directory"
 rm -rf $OUTPUTS
