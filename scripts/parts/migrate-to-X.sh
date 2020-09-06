@@ -11,3 +11,6 @@ sed -i "s|implementation 'com.android.support:support-compat:28.0.0'|implementat
 sed -i "s|implementation 'com.android.support:appcompat-v7:28.0.0'|implementation 'androidx.appcompat:appcompat:1.0.0'|g" build.gradle
 echo "android.enableJetifier=true" >> gradle.properties
 echo "android.useAndroidX=true" >> gradle.properties
+
+cd $BUILD_DIR/IchnaeaNlpBackend
+sed -i 's|compileSdkVersion 27|compileSdkVersion 29|g' build.gradle
