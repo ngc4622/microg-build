@@ -6,7 +6,7 @@ echo "sdk-location=$ANDROID_SDK_PATH" >> local.properties
 # Add some memory to avoid build problems
 echo "org.gradle.jvmargs=-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError" >> gradle.properties
 ./gradlew build > /dev/null
-cp play-services-core/build/outputs/apk/mapbox/release/play-services-core-mapbox-release-unsigned.apk $OUTPUTS/play-services-core-release.apk
+cp play-services-core/build/outputs/apk/withMapboxWithNearby/release/play-services-core-withMapbox-withNearby-release-unsigned.apk $OUTPUTS/play-services-core-release.apk
 
 
 # Sign APK
