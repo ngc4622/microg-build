@@ -27,9 +27,6 @@ else
     git clone https://github.com/ngc4622/NominatimGeocoderBackend.git -b androidX
     git clone https://github.com/openbmap/radiocells-nlp-android.git
     git clone https://github.com/microg/RemoteDroidGuard.git
-    # clone F-Droid
-    git clone https://gitlab.com/fdroid/fdroidclient.git -b 1.9
-    git clone https://gitlab.com/fdroid/privileged-extension.git -b 0.2.11
 fi
 
 cd $TOP_DIR

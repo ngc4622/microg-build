@@ -1,8 +1,6 @@
 source scripts/environment.sh
 source $TOP_DIR/scripts/parts/droidguard.sh
 source $TOP_DIR/scripts/parts/fakestore.sh
-source $TOP_DIR/scripts/parts/fdroid.sh
-source $TOP_DIR/scripts/parts/fdroidprivilegedextension.sh
 source $TOP_DIR/scripts/parts/gmscore.sh
 source $TOP_DIR/scripts/parts/gsfproxy.sh
 source $TOP_DIR/scripts/parts/mapsv1.sh
